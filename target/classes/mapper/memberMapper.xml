@@ -3,17 +3,27 @@
 <mapper namespace="memberMapper">
 
 <insert id='register'>
-	INSERT INTO member(
+	INSERT IGNORE INTO member(
 		USERID,
 		USERPWD,
 		USERNAME,
 		EMAIL
-		) VALUES(
+		) 
+		VALUES(
 		#{userId},
 		#{userPwd},
 		#{userName},
 		#{Email}
 		)
 </insert>	
-
+<select id="idCnt" parameterType="com.spring.vo.MemberVO" resultType="java.lang.Integer">
+<![CDATA[
+	select
+		count(*)
+	from
+		member
+	where
+		USERID = #{userId}
+]]>	
+</select>
 </mapper>

@@ -5,5 +5,6 @@ import com.spring.vo.MemberVO;
 public interface MemberDAO {
 	
 	public void register(MemberVO memberVO) throws Exception;
-	
+
+	public int idCnt(MemberVO memberVO);
 }

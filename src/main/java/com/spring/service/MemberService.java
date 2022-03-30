@@ -7,4 +7,7 @@ import com.spring.vo.MemberVO;
 public interface MemberService {
 	
 	public void register(MemberVO memberVO) throws Exception;
+
+	public int idCnt(MemberVO memberVO);
+
 }

@@ -18,4 +18,10 @@ public class MemberServiceImpl implements MemberService{
 	public void register(MemberVO memberVO) throws Exception {
 		memberDAO.register(memberVO);
 	}
+
+	@Override
+	public int idCnt(MemberVO memberVO) {
+		return memberDAO.idCnt(memberVO);
+	}
+
 }
