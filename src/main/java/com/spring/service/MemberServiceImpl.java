@@ -24,4 +24,16 @@ public class MemberServiceImpl implements MemberService{
 		return memberDAO.idCnt(memberVO);
 	}
 
+	@Override
+	public MemberVO checkLoginBefore(String value) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void memberAuth(String memberEmail) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

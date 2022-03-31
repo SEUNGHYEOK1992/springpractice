@@ -26,4 +26,12 @@
 		USERID = #{userId}
 ]]>	
 </select>
+<insert id="createAuthKey">
+	insert into member_auth values(#{memberEmail}, #{authKey})
+</insert>
+
+<update id="memberAuth">
+	<![CDATA[update member set member_autj = 1 where (select count(*) from member_auth where member_email = #{memberEmail}) > 0]]>
+</update>
+
 </mapper>
